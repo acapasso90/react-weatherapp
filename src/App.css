@@ -1,38 +1,118 @@
-.App {
+a,
+a:hover,
+a:visited {
+  color: #943bd3;
+  text-decoration: none;
+}
+
+body {
+  margin-left: 5px;
+  background: radial-gradient(#322f3d, #15051e);
+  color: #7e777a;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 22px;
+  text-transform: capitalize;
+  max-width: 1250px;
+}
+
+footer {
+  font-size: 16px;
   text-align: center;
+  padding-top: 100px;
+  color: #f2efd0;
+  white-space: nowrap;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serifs;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {min-height: 80px;
+  min-width: 80px;}
+  
+input,
+textarea {
+  padding: 5px;
+  background: #322f3d;
+  color: #f2efd0;
+  border: 1px solid #a58b98;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn {min-width: 115.47px;}
+
+.celsiusFarenheit {margin-left: -17px;}
+
+
+.container {min-height: 700px;
+}
+.currentIcons {
+margin-top: -100px;
+margin-left: 20px;
+  color: #a58b98;
+  width: 135px;
 }
 
-.App-link {
-  color: #61dafb;
+.currentSpecifics {  color: #f2efd0;
+  font-size: 17px;
+  margin-left: -20px;
+  margin-bottom: 70px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dateStamp {font-size: 20px;
+  font-weight: lighter;}
+
+
+.hereNow {
+  font-size: 33px;
+}
+
+.humidity1 {position: relative;
+  bottom: 90px;
+right: 15px;}
+
+.icon2 {position: relative;
+right: 20px;}
+
+.iconNow {min-height: 125px;
+  min-width: 125px;}
+
+.left {float: left;}
+
+.right {float: right;}
+
+.row {margin: 20;
+min-width: 1600px;
+padding-left: 5px;}
+
+.searchBar {  padding: 30px 0 0 867px;
+  width: 100%;
+  white-space: nowrap;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+
+.submitlocations h4 {
+  margin: 5px 0 0 1100px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.statusNow {font-size: 22px;
+  font-weight: bolder;}
+  
+
+.tempNow {
+  font-size: 34px;
+  margin-top: -30px;
+  margin-left: 18px;
+}
+
+.thisLocation {
+ position: relative;
+ right: 700px;
+ bottom: 75px;
+  text-align: center;
+  color: #c9a9b9;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }

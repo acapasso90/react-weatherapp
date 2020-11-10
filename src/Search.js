@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Search.css";
+import "./App.css";
 
 export default function Searchcity() {
     const [city, setCity] = useState("");
@@ -43,11 +43,27 @@ export default function Searchcity() {
   
     return (
       <div className="inputs">
-        {" "}
+         <div className="searchBar">
         <form onSubmit={handleSubmit}>
-          <input type="search" onChange={updateCity} />
-          <input type="submit" value="Search" />
+          <input type="search" onChange={updateCity} 
+              placeholder="Enter your location"
+              autoFocus="on"
+              autoComplete="off"
+              className="shadow-sm" />
+              <span className="searchButton">
+          <input type="submit" value="search" className="btn btn-dark shadow-sm" />
+          </span>
         </form>
+        </div>
+        <div className="submitlocations">
+        <h4>
+          <input
+            type="submit"
+            value="use current"
+            className="btn btn-dark shadow-sm"
+          />
+        </h4>
+        </div>
         <h3> {displayCity} </h3>
       </div>
     );
