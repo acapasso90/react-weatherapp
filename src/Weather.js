@@ -1,5 +1,4 @@
 import React from "react";
-import './bootstrap-grid.css';
 import Search from "./Search";
 
 
@@ -16,6 +15,7 @@ export default function Weather(){
     minutes: 48
   };
   return ( 
+  <div className="weather">
       <div className="container">
         <Search />
     <div className="left">
@@ -27,7 +27,7 @@ export default function Weather(){
           />
         </div>
         <div className="tempNow">
-          <span>{weatherData.temperatureHigh}</span>│
+          <span>{weatherData.temperatureHigh}</span>/
           <span>{weatherData.temperatureLow}</span>°F
         </div>
         <div className="celsiusFarenheit">
@@ -135,6 +135,7 @@ export default function Weather(){
           by  <a href="https://www.amandacapasso.com" target="_blank"
           rel="noreferrer" className="businessLink">Amanda Capasso </a>
         </footer>
+</div>
 </div>
   );}
 

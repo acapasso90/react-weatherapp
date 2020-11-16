@@ -1,18 +1,18 @@
 a,
 a:hover,
 a:visited {
-  color: #943bd3;
+  color: #62C2CD;
   text-decoration: none;
 }
 
 body {
+  background:  #282A36;
   margin-left: 5px;
-  background: radial-gradient(#322f3d, #15051e);
-  color: #7e777a;
+  color: #b1c2ce;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 22px;
   text-transform: capitalize;
-  max-width: 1250px;
+  max-width: 1200px;
 }
 
 footer {
@@ -42,7 +42,8 @@ ul {
 
 .btn {min-width: 115.47px;}
 
-.celsiusFarenheit {margin-left: -17px;}
+.celsiusFarenheit {margin-left: -7px;
+font-size: 20px;}
 
 
 .container {min-height: 700px;
@@ -61,58 +62,67 @@ margin-left: 20px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-.dateStamp {font-size: 20px;
+.dateStamp {font-size: 24px;
   font-weight: lighter;}
 
 
 .hereNow {
-  font-size: 33px;
+  font-size: 35px;
 }
 
 .humidity1 {position: relative;
   bottom: 90px;
-right: 15px;}
+right: 15px;
+font-size: 22px;}
 
 .icon2 {position: relative;
 right: 20px;}
 
-.iconNow {min-height: 125px;
-  min-width: 125px;}
+.iconNow {min-height: 140px;
+  min-width: 140px;}
 
 .left {float: left;}
 
 .right {float: right;}
 
 .row {margin: 20;
-min-width: 1500px;
-padding-left: 5px;}
+min-width: 1400px;}
 
-.searchBar {  padding: 30px 0 0 867px;
+.searchBar {  padding: 30px 0 0 787px;
   width: 100%;
   white-space: nowrap;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
 
 
 .submitlocations h4 {
-  margin: 5px 0 0 1100px;
+  margin: 5px 0 0 1021px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-.statusNow {font-size: 22px;
+.statusNow {font-size: 28px;
   font-weight: bolder;}
   
 
 .tempNow {
-  font-size: 34px;
+  font-size: 40px;
   margin-top: -30px;
-  margin-left: 18px;
+  margin-left: 20px;
 }
 
 .thisLocation {
  position: relative;
- right: 700px;
- bottom: 75px;
+ right: 520px;
+ bottom: 70px;
   text-align: center;
-  color: #c9a9b9;
+  color: #ffffff;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.weather { border: 1px solid gray;
+min-width: 1200px;
+border-radius: 5px;
+margin-top: 5px;
+display: flex;
+position: relative;
+left: 12%;
 }
