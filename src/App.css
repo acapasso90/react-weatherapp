@@ -86,16 +86,16 @@ right: 20px;}
 .right {float: right;}
 
 .row {margin: 20;
-min-width: 1400px;}
+min-width: 1380px;}
 
-.searchBar {  padding: 30px 0 0 787px;
+.searchBar {  padding: 30px 0 0 767px;
   width: 100%;
   white-space: nowrap;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
 
 
 .submitlocations h4 {
-  margin: 5px 0 0 1021px;
+  margin: 5px 0 0 1001px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
