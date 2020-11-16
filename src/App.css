@@ -1,38 +1,37 @@
 a,
 a:hover,
 a:visited {
-  color: #62C2CD;
+  color: #71C6E1;
   text-decoration: none;
 }
 
 body {
   background:  #282A36;
-  margin-left: 5px;
-  color: #b1c2ce;
+  color: #ffffff;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 22px;
   text-transform: capitalize;
-  max-width: 1200px;
 }
 
 footer {
   font-size: 16px;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 70px;
+  padding-left: 20px;
   color: #f2efd0;
   white-space: nowrap;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serifs;
-}
-
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+} 
 img {min-height: 80px;
   min-width: 80px;}
   
 input,
 textarea {
-  padding: 5px;
-  background: #322f3d;
+  padding: 7px;
+  background: rgb(45, 48, 61);
   color: #f2efd0;
   border: 1px solid #a58b98;
+  border-radius: 2px;
   font-size: 16px;
 }
 
@@ -42,22 +41,22 @@ ul {
 
 .btn {min-width: 115.47px;}
 
-.celsiusFarenheit {margin-left: -7px;
+.celsiusFarenheit {
+  margin-left: -10px;
 font-size: 20px;}
 
 
-.container {min-height: 700px;
+.container {min-height: 600px;
 }
 .currentIcons {
-margin-top: -100px;
-margin-left: 20px;
+margin-top: -120px;
   color: #a58b98;
   width: 135px;
 }
 
 .currentSpecifics {  color: #f2efd0;
   font-size: 17px;
-  margin-left: -20px;
+  margin-left: -50px;
   margin-bottom: 70px;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -73,7 +72,8 @@ margin-left: 20px;
 .humidity1 {position: relative;
   bottom: 90px;
 right: 15px;
-font-size: 22px;}
+font-size: 22px;
+}
 
 .icon2 {position: relative;
 right: 20px;}
@@ -83,9 +83,16 @@ right: 20px;}
 
 .left {float: left;}
 
+.Loader {    margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+width: 99%;}
+
 .right {float: right;}
 
-.row {margin: 20;
+.row {position: relative;
+  right: 15px;
 min-width: 1380px;}
 
 .searchBar {  padding: 30px 0 0 767px;
@@ -95,7 +102,7 @@ min-width: 1380px;}
 
 
 .submitlocations h4 {
-  margin: 5px 0 0 1001px;
+  margin: 5px 0 0 1006px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
@@ -104,15 +111,15 @@ min-width: 1380px;}
   
 
 .tempNow {
-  font-size: 40px;
+  font-size: 50px;
   margin-top: -30px;
-  margin-left: 20px;
+  margin-left: -15px;
 }
 
 .thisLocation {
  position: relative;
- right: 520px;
- bottom: 70px;
+ right: 610px;
+ bottom: 76px;
   text-align: center;
   color: #ffffff;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -120,9 +127,8 @@ min-width: 1380px;}
 
 .weather { border: 1px solid gray;
 min-width: 1200px;
+max-height: 600px;
 border-radius: 5px;
 margin-top: 5px;
 display: flex;
-position: relative;
-left: 12%;
 }

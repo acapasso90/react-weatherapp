@@ -1,141 +1,148 @@
-import React from "react";
+import React, {useState} from "react";
 import Search from "./Search";
+import axios from "axios";
+import Loader from 'react-loader-spinner'
 
+export default function Weather(props){
+  const [weatherData, setWeatherData] = useState({ready:false});
+function handleResponse(response){
+  setWeatherData({
+    ready: true,
+  temperatureHigh: Math.round(response.data.main.temp_max),
+  temperatureLow: Math.round(response.data.main.temp_min),
+  windSpeed: Math.round(response.data.wind.speed),
+  humidity:  Math.round(response.data.main.humidity),
+  city: response.data.name,
+  description: response.data.weather[0].description,
+  icon: response.data.weather[0].icon,
+  iconURL: `https://openweathermap.org/img/wn/10d@2x.png`,
+ })
+}
 
-export default function Weather(){
-    let weatherData = {
-    city: "New York",
-    temperatureHigh: 88,
-    temperatureLow: 78,
-    windSpeed: 5,
-    humidity: 70,
-    description: "sunny",
-    date: "Thursday 10/22",
-    hours: 12,
-    minutes: 48
-  };
-  return ( 
+if(weatherData.ready) { 
+return ( 
   <div className="weather">
-      <div className="container">
-        <Search />
-    <div className="left">
-        <div className="currentIcons">
-          <img
-            className="iconNow"
-            alt=""
-            src="http://openweathermap.org/img/wn/10d@2x.png"
-          />
-        </div>
-        <div className="tempNow">
-          <span>{weatherData.temperatureHigh}</span>/
-          <span>{weatherData.temperatureLow}</span>°F
-        </div>
-        <div className="celsiusFarenheit">
-          <a href="/" className="celsius" id="dormant">
-            Celsius
-          </a>{" "}
-          ┃
-          <a href="/" className="farenheit" id="active">
-            Farenheit
-          </a>
-        </div>
-        <div className="currentSpecifics">
-          <ul>
-            <li className="humidity">Humidity: {weatherData.humidity}%</li>
-            <li className="windSpeed">Wind: {weatherData.windSpeed} mph</li>
-          </ul>
-        </div>
-    </div>
-
-    <div className="right">
-        <div className="thisLocation">
+       <div className="container">
+         <Search />
+     <div className="left">
+         <div className="currentIcons">
+           <img
+             className="iconNow"
+             alt={weatherData.description}
+             src={weatherData.iconURL}
+           />
+         </div>
+         <div className="tempNow">
+           <span>{weatherData.temperatureHigh}</span>/
+           <span>{weatherData.temperatureLow}</span>°F
+         </div>
+         <div className="celsiusFarenheit">
+           <a href="/" className="celsius" id="dormant">
+             Celsius
+           </a>{" "}
+           ┃
+           <a href="/" className="farenheit" id="active">
+             Farenheit
+           </a>
+         </div>
+         <div className="currentSpecifics">
+           <ul>
+             <li className="humidity">Humidity: {weatherData.humidity}%</li>
+             <li className="windSpeed">Wind: {weatherData.windSpeed} mph</li>
+           </ul>
+         </div>
+     </div>
+ 
+       <div className="right">
+         <div className="thisLocation">
           <span className="hereNow"> {weatherData.city} </span>
-          <br />
-          <span className="statusNow">{weatherData.description}</span>
-          <br />
-          <span className="dateStamp">
-            <em>
-              {weatherData.date} {weatherData.hours}:{weatherData.minutes}
-            </em>
-          </span>
-        </div>
-    </div>
-<br />
-<div className="row">
-    <div className="col-2">
-        <div className="forecast2">
-            <span className="time2"> {weatherData.hours}:00 </span>
-            <br />
-            <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-        <div id="temp2">{weatherData.temperatureHigh}°/{weatherData.temperatureLow}°F</div>
-        <div className="right">
-            <span className="humidity1"> <small><em>Humidity: {weatherData.humidity} </em></small> </span>
-        </div>
-    </div>
-    </div>
-    <div className="col-2">
-        <div className="forecast3">
-            <span className="time3"> {weatherData.hours}:00 </span>
-            <br />
-            <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-        <div id="temp3">{weatherData.temperatureHigh}°/{weatherData.temperatureLow}°F</div>
-        <div className="right">
-            <span className="humidity1"> <small><em>Humidity: {weatherData.humidity} </em></small> </span>
-        </div>
-    </div>
-    </div>
+           <br />
+           <span className="statusNow">{weatherData.description}</span>
+           <br />
+           <span className="dateStamp">
+             <em>
+             date, hours:minutes
+             </em>
+           </span>
+         </div>
+     </div>
+ <br />
+ <div className="row">
+     <div className="col-2">
+         <div className="forecast2">
+             <span className="time2"> hours:00 </span>
+             <br />
+             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
+         <div id="temp2">hightemp°/lowtemp°F</div>
+         <div className="right">
+             <span className="humidity1"> <small><em>Humidity: % </em></small> </span>
+         </div>
+     </div>
+     </div>
+     <div className="col-2">
+         <div className="forecast3">
+             <span className="time3"> hours:00 </span>
+             <br />
+             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
+             <div id="temp3">hightemp°/lowtemp°F</div>
+         <div className="right">
+         <span className="humidity1"> <small><em>Humidity:% </em></small> </span>
+         </div>
+     </div>
+     </div>
+ 
+     <div className="col-2">
+         <div className="forecast4">
+             <span className="time4"> hours:00 </span>
+             <br />
+             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
+         <div id="temp4">hightemp°/lowtemp°F</div>
+         <div className="right">
+             <span className="humidity1"> <small><em>Humidity: </em></small></span>
+         </div>
+     </div>
+     </div>
+ 
+     <div className="col-2">
+         <div className="forecast5">
+             <span className="time5"> hours:00 </span>
+             <br />
+             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
+         <div id="temp5">hightemp°/lowtemp°F</div>
+         <div className="right">
+             <span className="humidity1"> <small><em>Humidity: </em></small></span>
+         </div>
+     </div>
+ </div>
+     <div className="col-2">
+         <div className="forecast3">
+             <span className="time3"> hours:00 </span>
+             <br />
+             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
+         <div id="temp3">hightemp°/lowtemp°F</div>
+         <div className="right">
+             <span className="humidity1"> <small><em>Humidity:  </em></small> </span>
+         </div>
+     </div>
+ </div>
+ </div>    
+ </div>
+ </div>);} else {
+  const apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
+  axios.get(apiURL).then(handleResponse);
 
-    <div className="col-2">
-        <div className="forecast4">
-            <span className="time4"> {weatherData.hours}:00 </span>
-            <br />
-            <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-        <div id="temp4">{weatherData.temperatureHigh}°/{weatherData.temperatureLow}°F</div>
-        <div className="right">
-            <span className="humidity1"> <small><em>Humidity: {weatherData.humidity} </em></small></span>
-        </div>
-    </div>
-    </div>
-
-    <div className="col-2">
-        <div className="forecast5">
-            <span className="time5"> {weatherData.hours}:00 </span>
-            <br />
-            <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-        <div id="temp5">{weatherData.temperatureHigh}°/{weatherData.temperatureLow}°F</div>
-        <div className="right">
-            <span className="humidity1"> <small><em>Humidity: {weatherData.humidity} </em></small></span>
-        </div>
-    </div>
+return(<div className="Loader">
+  <h3>Loading</h3>
+<Loader
+type="Circles"
+color="#71C6D6"
+height={100}
+width={100}
+timeout={9000}
+/>
 </div>
-    <div className="col-2">
-        <div className="forecast3">
-            <span className="time3"> {weatherData.hours}:00 </span>
-            <br />
-            <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-        <div id="temp3">{weatherData.temperatureHigh}°/{weatherData.temperatureLow}°F</div>
-        <div className="right">
-            <span className="humidity1"> <small><em>Humidity: {weatherData.humidity} </em></small> </span>
-        </div>
-    </div>
-</div>
-</div>
-    <br />
-        <footer>
-          {" "}
-          <a
-            href="https://github.com/acapasso90/react-weatherapp"
-            target="_blank"
-            rel="noreferrer"
-            className="githubLink"
-          >
-            {" "}
-            Open-source code
-          </a>{" "}
-          by  <a href="https://www.amandacapasso.com" target="_blank"
-          rel="noreferrer" className="businessLink">Amanda Capasso </a>
-        </footer>
-</div>
-</div>
-  );}
+);}
+ 
+ }
 
