@@ -2,12 +2,15 @@ import React, {useState} from "react";
 import Search from "./Search";
 import axios from "axios";
 import Loader from 'react-loader-spinner'
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props){
   const [weatherData, setWeatherData] = useState({ready:false});
 function handleResponse(response){
+  console.log(response);
   setWeatherData({
     ready: true,
+    date: new Date(response.data.dt * 1000),
   temperatureHigh: Math.round(response.data.main.temp_max),
   temperatureLow: Math.round(response.data.main.temp_min),
   windSpeed: Math.round(response.data.wind.speed),
@@ -61,7 +64,7 @@ return (
            <br />
            <span className="dateStamp">
              <em>
-             date, hours:minutes
+             <FormattedDate date={weatherData.date} />
              </em>
            </span>
          </div>
@@ -84,7 +87,7 @@ return (
              <span className="time3"> hours:00 </span>
              <br />
              <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-             <div id="temp3">hightemp°/lowtemp°F</div>
+             <div id="temp2">hightemp°/lowtemp°F</div>
          <div className="right">
          <span className="humidity1"> <small><em>Humidity:% </em></small> </span>
          </div>
@@ -96,7 +99,7 @@ return (
              <span className="time4"> hours:00 </span>
              <br />
              <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-         <div id="temp4">hightemp°/lowtemp°F</div>
+         <div id="temp2">hightemp°/lowtemp°F</div>
          <div className="right">
              <span className="humidity1"> <small><em>Humidity: </em></small></span>
          </div>
@@ -108,7 +111,7 @@ return (
              <span className="time5"> hours:00 </span>
              <br />
              <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-         <div id="temp5">hightemp°/lowtemp°F</div>
+         <div id="temp2">hightemp°/lowtemp°F</div>
          <div className="right">
              <span className="humidity1"> <small><em>Humidity: </em></small></span>
          </div>
@@ -119,7 +122,7 @@ return (
              <span className="time3"> hours:00 </span>
              <br />
              <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-         <div id="temp3">hightemp°/lowtemp°F</div>
+         <div id="temp2">hightemp°/lowtemp°F</div>
          <div className="right">
              <span className="humidity1"> <small><em>Humidity:  </em></small> </span>
          </div>

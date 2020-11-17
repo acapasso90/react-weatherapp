@@ -8,7 +8,7 @@ a:visited {
 body {
   background:  #282A36;
   color: #ffffff;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: "roboto", monospace;
   font-size: 22px;
   text-transform: capitalize;
 }
@@ -19,9 +19,7 @@ footer {
   padding-top: 70px;
   padding-left: 20px;
   color: #f2efd0;
-  white-space: nowrap;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-} 
+  white-space: nowrap;} 
 img {min-height: 80px;
   min-width: 80px;}
   
@@ -43,7 +41,8 @@ ul {
 
 .celsiusFarenheit {
   margin-left: -10px;
-font-size: 20px;}
+font-size: 24px;
+font-family: 'Yanone Kaffeesatz', sans-serif;}
 
 
 .container {min-height: 600px;
@@ -55,14 +54,15 @@ margin-top: -120px;
 }
 
 .currentSpecifics {  color: #f2efd0;
-  font-size: 17px;
+  font-size: 25px;
   margin-left: -50px;
   margin-bottom: 70px;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
+  font-family: 'Yanone Kaffeesatz', sans-serif;}
 
-.dateStamp {font-size: 24px;
-  font-weight: lighter;}
+.dateStamp h1 {font-size: 30px;
+  font-weight: 100;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+margin-top: 3px;}
 
 
 .hereNow {
@@ -98,31 +98,35 @@ min-width: 1380px;}
 .searchBar {  padding: 30px 0 0 767px;
   width: 100%;
   white-space: nowrap;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+  font-size: 22px;
+  font-family: "roboto", monospace;
+}
 
 
 .submitlocations h4 {
-  margin: 5px 0 0 1006px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin: 5px 0 0 966px;
+  font-family: "roboto", monospace;
 }
 
 .statusNow {font-size: 28px;
-  font-weight: bolder;}
-  
+  font-weight: bolder;
+}  
 
 .tempNow {
   font-size: 50px;
   margin-top: -30px;
   margin-left: -15px;
+  font-family: "roboto", monospace;
 }
+
+.temp2 { font-family: "roboto", monospace;}
 
 .thisLocation {
  position: relative;
- right: 610px;
- bottom: 76px;
+ right: 560px;
+ bottom: 95px;
   text-align: center;
   color: #ffffff;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 .weather { border: 1px solid gray;
