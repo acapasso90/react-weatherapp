@@ -1,11 +1,11 @@
 import React, {useState} from "react";
-import Search from "./Search";
 import axios from "axios";
 import Loader from 'react-loader-spinner'
-import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo.js";
 
 export default function Weather(props){
   const [weatherData, setWeatherData] = useState({ready:false});
+  const [city, setCity] = useState(props.defaultCity);
 function handleResponse(response){
   console.log(response);
   setWeatherData({
@@ -18,131 +18,59 @@ function handleResponse(response){
   city: response.data.name,
   description: response.data.weather[0].description,
   icon: response.data.weather[0].icon,
-  iconURL: `https://openweathermap.org/img/wn/10d@2x.png`,
  })
 }
+
+function search(){  const apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
+let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+axios.get(apiURL).then(handleResponse);
+}
+
+function handleSubmit(event){event.preventDefault();
+search();}
+
+function updateCity(event){setCity(event.target.value)};
 
 if(weatherData.ready) { 
 return ( 
   <div className="weather">
        <div className="container">
-         <Search />
-     <div className="left">
-         <div className="currentIcons">
-           <img
-             className="iconNow"
-             alt={weatherData.description}
-             src={weatherData.iconURL}
-           />
-         </div>
-         <div className="tempNow">
-           <span>{weatherData.temperatureHigh}</span>/
-           <span>{weatherData.temperatureLow}</span>°F
-         </div>
-         <div className="celsiusFarenheit">
-           <a href="/" className="celsius" id="dormant">
-             Celsius
-           </a>{" "}
-           ┃
-           <a href="/" className="farenheit" id="active">
-             Farenheit
-           </a>
-         </div>
-         <div className="currentSpecifics">
-           <ul>
-             <li className="humidity">Humidity: {weatherData.humidity}%</li>
-             <li className="windSpeed">Wind: {weatherData.windSpeed} mph</li>
-           </ul>
-         </div>
-     </div>
- 
-       <div className="right">
-         <div className="thisLocation">
-          <span className="hereNow"> {weatherData.city} </span>
-           <br />
-           <span className="statusNow">{weatherData.description}</span>
-           <br />
-           <span className="dateStamp">
-             <em>
-             <FormattedDate date={weatherData.date} />
-             </em>
-           </span>
-         </div>
-     </div>
- <br />
- <div className="row">
-     <div className="col-2">
-         <div className="forecast2">
-             <span className="time2"> hours:00 </span>
-             <br />
-             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-         <div id="temp2">hightemp°/lowtemp°F</div>
-         <div className="right">
-             <span className="humidity1"> <small><em>Humidity: % </em></small> </span>
-         </div>
-     </div>
-     </div>
-     <div className="col-2">
-         <div className="forecast3">
-             <span className="time3"> hours:00 </span>
-             <br />
-             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-             <div id="temp2">hightemp°/lowtemp°F</div>
-         <div className="right">
-         <span className="humidity1"> <small><em>Humidity:% </em></small> </span>
-         </div>
-     </div>
-     </div>
- 
-     <div className="col-2">
-         <div className="forecast4">
-             <span className="time4"> hours:00 </span>
-             <br />
-             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-         <div id="temp2">hightemp°/lowtemp°F</div>
-         <div className="right">
-             <span className="humidity1"> <small><em>Humidity: </em></small></span>
-         </div>
-     </div>
-     </div>
- 
-     <div className="col-2">
-         <div className="forecast5">
-             <span className="time5"> hours:00 </span>
-             <br />
-             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-         <div id="temp2">hightemp°/lowtemp°F</div>
-         <div className="right">
-             <span className="humidity1"> <small><em>Humidity: </em></small></span>
-         </div>
-     </div>
+       <div className="inputs">
+         <div className="searchBar">
+        <form onSubmit={handleSubmit}>
+          <input type="search" onChange={updateCity} 
+              placeholder="Enter your location"
+              autoFocus="on"
+              autoComplete="off"
+              className="shadow-sm" />
+              <span className="searchButton">
+          <input type="submit" value="search" className="btn btn-dark shadow-sm" />
+          </span>
+        </form>
+        </div>
+        <div className="submitlocations">
+        <h4>
+          <input
+            type="submit"
+            value="use current"
+            className="btn btn-dark shadow-sm"
+          />
+        </h4>
+        </div>
+        </div>
+         <WeatherInfo data={weatherData} /> 
  </div>
-     <div className="col-2">
-         <div className="forecast3">
-             <span className="time3"> hours:00 </span>
-             <br />
-             <img id="icon2" src="https://openweathermap.org/img/wn/01d.png" alt="icon" />
-         <div id="temp2">hightemp°/lowtemp°F</div>
-         <div className="right">
-             <span className="humidity1"> <small><em>Humidity:  </em></small> </span>
-         </div>
-     </div>
- </div>
- </div>    
- </div>
- </div>);} else {
-  const apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=imperial`;
-  axios.get(apiURL).then(handleResponse);
-
+ </div>);} else {search();
 return(<div className="Loader">
   <h3>Loading</h3>
+  <br />
 <Loader
-type="Circles"
+type="TailSpin"
 color="#71C6D6"
 height={100}
 width={100}
-timeout={9000}
+timeout={18000}
+className="loaderAnimation"
 />
 </div>
 );}

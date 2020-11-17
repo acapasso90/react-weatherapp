@@ -28,7 +28,7 @@ textarea {
   padding: 7px;
   background: rgb(45, 48, 61);
   color: #f2efd0;
-  border: 1px solid #a58b98;
+  border: 1px solid #50fa7b;
   border-radius: 2px;
   font-size: 16px;
 }
@@ -37,7 +37,9 @@ ul {
   list-style: none;
 }
 
-.btn {min-width: 115.47px;}
+.btn {min-width: 115.47px;
+padding: 8px 0;
+margin-top: 2px;}
 
 .celsiusFarenheit {
   margin-left: -10px;
@@ -48,7 +50,7 @@ font-family: 'Yanone Kaffeesatz', sans-serif;}
 .container {min-height: 600px;
 }
 .currentIcons {
-margin-top: -120px;
+margin: -100px 0 20px 15px;
   color: #a58b98;
   width: 135px;
 }
@@ -62,7 +64,8 @@ margin-top: -120px;
 .dateStamp h1 {font-size: 30px;
   font-weight: 100;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-margin-top: 3px;}
+margin-top: 3px;
+}
 
 
 .hereNow {
@@ -85,14 +88,18 @@ right: 20px;}
 
 .Loader {    margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   text-align: center;
   display: block;
 width: 99%;}
 
+.loaderAnimation {margin-top: 20px;}
+
 .right {float: right;}
 
 .row {position: relative;
-  right: 15px;
+  padding-right: 20px;
+  right: 25px;
 min-width: 1380px;}
 
 .searchBar {  padding: 30px 0 0 767px;
@@ -110,12 +117,13 @@ min-width: 1380px;}
 
 .statusNow {font-size: 28px;
   font-weight: bolder;
+  color: #f0ec8c;
 }  
 
 .tempNow {
   font-size: 50px;
   margin-top: -30px;
-  margin-left: -15px;
+  margin-left: -20px;
   font-family: "roboto", monospace;
 }
 
@@ -126,10 +134,9 @@ min-width: 1380px;}
  right: 560px;
  bottom: 95px;
   text-align: center;
-  color: #ffffff;
 }
 
-.weather { border: 1px solid gray;
+.weather { border: 1px solid #50fa7b;
 min-width: 1200px;
 max-height: 600px;
 border-radius: 5px;
