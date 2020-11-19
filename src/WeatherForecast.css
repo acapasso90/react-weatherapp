@@ -13,11 +13,17 @@ margin-right: auto;}
 }
 
 .WeatherForecast .temperature {
-font-size: 28px;
-text-align: center;}
+  font-family:  'Yanone Kaffeesatz', sans-serif;
+font-size: 36px;
+text-align: center;
+margin-left: 7px;}
 
-.WeatherForecast .col {max-width: 200px;
-padding-right: 100px;
-margin-top: -30px;}
+.WeatherForecast .col {max-width: 210px;
+padding-right: 150px;
+margin-top: -40px;}
 
-.WeatherForecastInformation .hours {font-size: 24px;}
+
+.WeatherForecastInformation .hours {font-size: 34px;
+  white-space: nowrap;
+    font-family:  'Yanone Kaffeesatz', sans-serif;
+  margin-left: -5px;}

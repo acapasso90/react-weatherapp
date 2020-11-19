@@ -3,8 +3,10 @@ import WeatherIcon from "./WeatherIcon.js";
 
 export default function WeatherForecastInformation(props){
     function hours(){ let date= new Date(props.data.dt * 1000 );
-        let hours = date.getHours()
-        return (<span className="hours">{hours}:00</span>);
+        let hours = date.getHours();
+        if (hours === 0){hours = 12;}
+    if (hours > 12){hours -=12; return (<span className="hours">{hours}:00 PM</span>);}
+    else {return(<span className="hours">{hours}:00 AM</span>);}
     }
 
     function temperature(){

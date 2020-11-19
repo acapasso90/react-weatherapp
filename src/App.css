@@ -75,15 +75,7 @@ color: #b870cc;
 }
 
 .humidity { color:  #50fa7b; }
-.humidity1 {position: relative;
-  bottom: 90px;
-right: 15px;
-font-size: 22px;
-color: #f0ec8c;
-}
 
-.icon2 {position: relative;
-right: 20px;}
 
 .iconNow {min-height: 140px;
   min-width: 140px;}
@@ -106,7 +98,7 @@ width: 99%;}
   right: 25px;
 min-width: 1380px;}
 
-.searchBar {  padding: 30px 0 0 777px;
+.searchBar {  padding: 30px 0 0 787px;
   width: 100%;
   white-space: nowrap;
   font-size: 22px;
@@ -115,7 +107,7 @@ min-width: 1380px;}
 
 
 .submitlocations h4 {
-  margin: 5px 0 0 976px;
+  margin: 5px 0 0 986px;
   font-family: "roboto", monospace;
 }
 
@@ -131,8 +123,6 @@ min-width: 1380px;}
   font-family: 'Yanone Kaffeesatz', sans-serif;
   letter-spacing: 2px;
 }
-
-.temp2 { font-family: "roboto", monospace;}
 
 .thisLocation {
  position: relative;
