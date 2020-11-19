@@ -28,7 +28,7 @@ textarea {
   padding: 7px;
   background: rgb(45, 48, 61);
   color: #f2efd0;
-  border: 1px solid #50fa7b;
+  border: 1px solid #b870cc;
   border-radius: 2px;
   font-size: 16px;
 }
@@ -70,12 +70,15 @@ margin-top: 3px;
 
 .hereNow {
   font-size: 35px;
+  color: #b870cc;
 }
 
+.humidity { color:  #50fa7b; }
 .humidity1 {position: relative;
   bottom: 90px;
 right: 15px;
 font-size: 22px;
+color: #f0ec8c;
 }
 
 .icon2 {position: relative;
@@ -115,7 +118,7 @@ min-width: 1380px;}
   font-family: "roboto", monospace;
 }
 
-.statusNow {font-size: 28px;
+.statusNow {font-size: 30px;
   font-weight: bolder;
   color: #f0ec8c;
 }  
@@ -136,10 +139,12 @@ min-width: 1380px;}
   text-align: center;
 }
 
-.weather { border: 1px solid #50fa7b;
+.weather { border: 2px solid #50fa7b;
 min-width: 1200px;
 max-height: 600px;
 border-radius: 5px;
 margin-top: 5px;
 display: flex;
 }
+
+.windSpeed {color: #b870cc;}
