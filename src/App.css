@@ -65,12 +65,13 @@ margin: -100px 0 20px 15px;
   font-weight: 100;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 margin-top: 3px;
+color: #b870cc;
 }
 
 
 .hereNow {
   font-size: 35px;
-  color: #b870cc;
+  color: #f0ec8c;
 }
 
 .humidity { color:  #50fa7b; }
@@ -105,7 +106,7 @@ width: 99%;}
   right: 25px;
 min-width: 1380px;}
 
-.searchBar {  padding: 30px 0 0 767px;
+.searchBar {  padding: 30px 0 0 777px;
   width: 100%;
   white-space: nowrap;
   font-size: 22px;
@@ -114,27 +115,28 @@ min-width: 1380px;}
 
 
 .submitlocations h4 {
-  margin: 5px 0 0 966px;
+  margin: 5px 0 0 976px;
   font-family: "roboto", monospace;
 }
 
 .statusNow {font-size: 30px;
   font-weight: bolder;
-  color: #f0ec8c;
+  color:  #50fa7b;
 }  
 
 .tempNow {
-  font-size: 50px;
-  margin-top: -30px;
-  margin-left: -20px;
-  font-family: "roboto", monospace;
+  font-size: 54px;
+  margin-top: -20px;
+  margin-left: -15px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 2px;
 }
 
 .temp2 { font-family: "roboto", monospace;}
 
 .thisLocation {
  position: relative;
- right: 560px;
+ right: 550px;
  bottom: 95px;
   text-align: center;
 }
@@ -146,5 +148,7 @@ border-radius: 5px;
 margin-top: 5px;
 display: flex;
 }
+
+.WeatherTemperature {padding-left: 10px;}
 
 .windSpeed {color: #b870cc;}

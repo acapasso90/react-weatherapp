@@ -12,7 +12,7 @@ export default function WeatherTemperature(props)
 if (unit === 'farenheit'){
     return(<div className="WeatherTemperature">
     <div className="tempNow">
-<span>{props.farenheitHigh}</span>/
+<span>{props.farenheitHigh}</span>/ 
 <span>{props.farenheitLow}</span>°F
 </div>
 <div className="celsiusFarenheit">

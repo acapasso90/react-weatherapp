@@ -2,12 +2,12 @@ import React, {useState} from "react";
 import axios from "axios";
 import Loader from 'react-loader-spinner'
 import WeatherInfo from "./WeatherInfo.js";
+import WeatherForecast from "./WeatherForecast.js";
 
 export default function Weather(props){
   const [weatherData, setWeatherData] = useState({ready:false});
   const [city, setCity] = useState(props.defaultCity);
 function handleResponse(response){
-  console.log(response);
   setWeatherData({
     ready: true,
     date: new Date(response.data.dt * 1000),
@@ -59,6 +59,7 @@ return (
         </div>
         </div>
          <WeatherInfo data={weatherData} /> 
+         <WeatherForecast city={weatherData.city} />
  </div>
  </div>);} else {search();
 return(<div className="Loader">
