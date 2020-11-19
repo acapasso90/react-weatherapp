@@ -31,6 +31,16 @@ search();}
 
 function updateCity(event){setCity(event.target.value)};
 
+function searchCity(position){let apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
+let units = "imperial";
+let latitude = position.coords.latitude;
+let longitude = position.coords.longitude;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+axios.get(apiUrl).then(handleResponse);}
+
+function useCity(event) {event.preventDefault();
+navigator.geolocation.getCurrentPosition(searchCity);}
+
 if(weatherData.ready) { 
 return ( 
   <div className="weather">
@@ -54,6 +64,7 @@ return (
             type="submit"
             value="use current"
             className="btn btn-dark shadow-sm"
+            onClick={useCity}
           />
         </h4>
         </div>
