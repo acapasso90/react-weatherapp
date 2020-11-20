@@ -17,7 +17,7 @@ footer {
   font-size: 16px;
   text-align: center;
   padding-top: 70px;
-  padding-left: 20px;
+  padding-left: 60px;
   color: #f2efd0;
   white-space: nowrap;} 
 img {min-height: 80px;
@@ -41,6 +41,7 @@ ul {
 padding: 8px 0;
 margin-top: 2px;}
 
+
 .celsiusFarenheit {
   margin-left: -10px;
 font-size: 24px;
@@ -61,7 +62,7 @@ margin: -100px 0 20px 15px;
   margin-bottom: 70px;
   font-family: 'Yanone Kaffeesatz', sans-serif;}
 
-.dateStamp h1 {font-size: 30px;
+.dateStamp h1 {font-size: 32px;
   font-weight: 100;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 margin-top: 3px;
@@ -70,8 +71,9 @@ color: #b870cc;
 
 
 .hereNow {
-  font-size: 35px;
+  font-size: 45px;
   color: #f0ec8c;
+max-height: 58px;
 }
 
 .humidity { color:  #50fa7b; }
@@ -111,9 +113,10 @@ min-width: 1380px;}
   font-family: "roboto", monospace;
 }
 
-.statusNow {font-size: 30px;
-  font-weight: bolder;
+.statusNow {font-size: 32px;
+  font-weight: bold;
   color:  #50fa7b;
+  max-height: 46px;
 }  
 
 .tempNow {
@@ -127,7 +130,7 @@ min-width: 1380px;}
 .thisLocation {
  position: relative;
  right: 550px;
- bottom: 95px;
+ bottom: 100px;
   text-align: center;
 }
 
@@ -137,8 +140,10 @@ max-height: 600px;
 border-radius: 5px;
 margin-top: 5px;
 display: flex;
+
 }
 
 .WeatherTemperature {padding-left: 10px;}
 
-.windSpeed {color: #b870cc;}
+.windSpeed {color: #b870cc;
+}

@@ -20,10 +20,8 @@ export default function WeatherInfo(props)
  
        <div className="right">
          <div className="thisLocation">
-          <span className="hereNow"> {props.data.city} </span>
-           <br />
-           <span className="statusNow">{props.data.description}</span>
-           <br />
+          <div className="hereNow"> {props.data.city} </div>
+           <div className="statusNow">{props.data.description}</div>
            <span className="dateStamp">
              <em>
              <FormattedDate date={props.data.date} />

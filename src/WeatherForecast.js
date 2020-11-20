@@ -6,10 +6,10 @@ import WeatherForecastInformation from "./WeatherForecastInformation";
 export default function WeatherForecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
+  
   function handleForecastResponse(response) {
     setForecast(response.data);
     setLoaded(true);
-    console.log(response.data);
   }
   if (loaded && props.city === forecast.city.name) {
     return (

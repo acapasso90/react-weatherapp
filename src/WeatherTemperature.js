@@ -26,7 +26,7 @@ export default function WeatherTemperature(props) {
         <div className="currentSpecifics">
           <ul>
             <li className="humidity">Humidity: {props.humidity}%</li>
-            <li className="windSpeed">Wind: {props.wind} mph</li>
+            <li className="windSpeed">Wind: {props.wind} MPH</li>
           </ul>
         </div>
       </div>
@@ -50,7 +50,7 @@ export default function WeatherTemperature(props) {
         <div className="currentSpecifics">
           <ul>
             <li className="humidity">Humidity: {props.humidity}%</li>
-            <li className="windSpeed">Wind: {Math.round(celsiusWind)} kph</li>
+            <li className="windSpeed">Wind: {Math.round(celsiusWind)} KM/H</li>
           </ul>
         </div>
       </div>

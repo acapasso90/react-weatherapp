@@ -19,16 +19,25 @@ export default function WeatherIcon(props){
         "11d": "RAIN",
         "11n": "RAIN",
         "13d": "SNOW",
-        "13dn": "SNOW",
+        "13n": "SNOW",
         "50d" : "FOG",
         "50n" : "FOG"
 
     }
-   
+
+    const IconNow = codeMapping[props.code];
+    console.log(IconNow);
+    if(IconNow ==="RAIN"  || IconNow ==="SNOW"){return(<div>  <ReactAnimatedWeather
+        icon={codeMapping[props.code]}
+        color="#71C6E1"
+        size={95}
+        animate={true}
+      /> </div>) }
+else{
     return(<div>  <ReactAnimatedWeather
     icon={codeMapping[props.code]}
     color="#f1ed68"
     size={95}
     animate={true}
-  /> </div>);}
+  /> </div>);}}
 
