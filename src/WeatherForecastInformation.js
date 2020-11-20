@@ -14,10 +14,23 @@ export default function WeatherForecastInformation(props){
         return(`${temperature}°F`);
     }
 
-    return( <div className="WeatherForecastInformation col">
-        {hours()}
-               <WeatherIcon code={props.data.weather[0].icon} />
-           <span class="temperature"> {temperature()}
-               </span></div>
-);
+    if (props.unit === "farenheit") {
+        return (
+          <div className="WeatherForecastInformation col">
+            {hours()}
+            <WeatherIcon code={props.data.weather[0].icon} />
+            <span class="temperature"> {temperature()}</span>
+          </div>
+        );
+      } else {
+        let temperature = Math.round(((props.data.main.temp - 32) * 5) / 9);
+        return (
+          <div className="WeatherForecastInformation col">
+            {hours()}
+            <WeatherIcon code={props.data.weather[0].icon} />
+            <span class="temperature"> {temperature}°C</span>
+          </div>
+        );
+    
+    }
 }

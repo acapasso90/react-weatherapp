@@ -8,13 +8,14 @@ export default function WeatherInfo(props)
 <div className="left">
          <div className="currentIcons">
              <WeatherIcon code={props.data.icon} />
-
          </div>
          <WeatherTemperature farenheitHigh={props.data.temperatureHigh} 
          farenheitLow={props.data.temperatureLow}
          wind={props.data.windSpeed}
-         humidity={props.data.humidity} />
-
+         humidity={props.data.humidity}
+         unit={props.unit}
+         setUnit={props.setUnit}
+/>
      </div>
  
        <div className="right">
