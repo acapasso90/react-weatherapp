@@ -26,7 +26,6 @@ export default function WeatherIcon(props){
     }
 
     const IconNow = codeMapping[props.code];
-    console.log(IconNow);
     if(IconNow ==="RAIN"  || IconNow ==="SNOW"){return(<div>  <ReactAnimatedWeather
         icon={codeMapping[props.code]}
         color="#71C6E1"
