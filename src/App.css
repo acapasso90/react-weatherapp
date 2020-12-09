@@ -4,7 +4,6 @@ a:visited {
   color: #71C6E1;
   text-decoration: none;
 }
-
 body {
   background:  #282A36;
   color: #ffffff;
@@ -20,9 +19,37 @@ footer {
   padding-left: 60px;
   color: #f2efd0;
   white-space: nowrap;} 
+
+  .mobile footer {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 70px;
+    padding-left: 20px;
+    margin-left: -20px;
+    color: #f2efd0;
+    white-space: nowrap;} 
+
+  .tablet footer {
+    font-size: 16px;
+    text-align: center;
+    padding-top: 70px;
+position: relative;
+right: 80px;
+margin-left: -20px;
+    color: #f2efd0;
+    white-space: nowrap;}
+
 img {min-height: 80px;
   min-width: 80px;}
-  
+
+.mobile img {min-height: 60px;
+  min-width: 60px;}
+
+.mobile input {max-width: 240px;
+position: relative;
+bottom: 30px;
+right: 95px;}
+
 input,
 textarea {
   padding: 7px;
@@ -47,20 +74,36 @@ margin-top: 2px;}
 font-size: 24px;
 font-family: 'Yanone Kaffeesatz', sans-serif;}
 
+.mobile .celsiusFarenheit {
+  margin-left: -15px;
+font-size: 20px;
+font-family: 'Yanone Kaffeesatz', sans-serif;}
 
 .container {min-height: 600px;
 }
+
+
 .currentIcons {
 margin: -100px 0 20px 15px;
   color: #a58b98;
   width: 135px;
 }
 
+.mobile .currentIcons{
+  margin: -10px 0 90px 200px;
+    color: #a58b98;
+    width: 135px;
+  }
+
+.mobile .currentIcons canvas {max-width: 60px;
+max-height: 60px;}
+
 .currentSpecifics {  color: #f2efd0;
   font-size: 25px;
   margin-left: -50px;
   margin-bottom: 70px;
   font-family: 'Yanone Kaffeesatz', sans-serif;}
+
 
 .dateStamp h1 {font-size: 32px;
   font-weight: 100;
@@ -69,6 +112,12 @@ margin-top: 3px;
 color: #b870cc;
 }
 
+.mobile .dateStamp h1 {font-size: 18px;
+  font-weight: 100;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+margin-top: 3px;
+color: #b870cc;
+}
 
 .hereNow {
   font-size: 45px;
@@ -76,11 +125,17 @@ color: #b870cc;
 max-height: 58px;
 }
 
+.mobile .hereNow {
+  font-size: 21px;
+  color: #f0ec8c;
+max-height: 58px;
+}
 .humidity { color:  #50fa7b; }
 
 
 .iconNow {min-height: 140px;
   min-width: 140px;}
+
 
 .left {float: left;}
 
@@ -100,20 +155,48 @@ width: 99%;}
   right: 25px;
 min-width: 1380px;}
 
+.mobile .row {position: relative;
+  padding-right: 20px;
+  right: 25px;
+display: flex;
+flex-direction: column;}
+
+.mobile .col {position: relative;
+  left: 10px;
+bottom: 380px;
+margin-bottom: 50px;}
 .searchBar {  padding: 30px 0 0 787px;
   width: 100%;
   white-space: nowrap;
+  display: flex;
   font-size: 22px;
   font-family: "roboto", monospace;
 }
 
-
-.submitlocations h4 {
-  margin: 5px 0 0 986px;
+.mobile .searchBar {  padding: 30px 0 0 87px;
+  flex-direction: row;
   font-family: "roboto", monospace;
 }
 
+.mobile .btn {position: relative;
+  top: -28px;
+left: -76px;}
+
+.submitlocations h4 {
+  margin: 5px 0 0 976px;
+  font-family: "roboto", monospace;
+}
+.mobile  .submitlocations h4 {
+  margin: 5px 0 0 286px;
+  font-family: "roboto", monospace;
+}
 .statusNow {font-size: 32px;
+  font-weight: bold;
+  color:  #50fa7b;
+  max-height: 46px;
+}  
+
+.mobile .statusNow {font-size: 18px;
   font-weight: bold;
   color:  #50fa7b;
   max-height: 46px;
@@ -127,12 +210,33 @@ min-width: 1380px;}
   letter-spacing: 2px;
 }
 
+.mobile .tempNow {
+  font-size: 30px;
+  margin-top: -20px;
+  margin-left: -15px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 2px;
+}
+
 .thisLocation {
  position: relative;
  right: 550px;
  bottom: 100px;
   text-align: center;
 }
+.mobile  .thisLocation {
+  position: relative;
+  right: 140px;
+  bottom: 400px;
+   text-align: center;
+ }
+.tablet .thisLocation {
+  position: relative;
+  right: 400px;
+  bottom: 105px;
+   text-align: center;
+ }
+
 
 .weather { border: 2px solid #50fa7b;
 min-width: 1200px;
@@ -143,7 +247,26 @@ display: flex;
 
 }
 
+.mobile .weather { border: 2px solid #50fa7b;
+  min-width: 350px;
+  max-height: 1420px;
+  border-radius: 5px;
+  margin-top: 5px;
+  display: flex;
+  }
+
+  .tablet .weather { border: 2px solid #50fa7b;
+    min-width: 350px;
+    max-height: 1000px;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: flex;
+    }
+
 .WeatherTemperature {padding-left: 10px;}
 
+.mobile .WeatherTemperature {position: relative;
+left: 200px;
+bottom: 70px;}
 .windSpeed {color: #b870cc;
 }

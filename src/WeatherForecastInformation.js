@@ -19,7 +19,7 @@ export default function WeatherForecastInformation(props){
           <div className="WeatherForecastInformation col">
             {hours()}
             <WeatherIcon code={props.data.weather[0].icon} />
-            <span class="temperature"> {temperature()}</span>
+            <span className="temperature"> {temperature()}</span>
           </div>
         );
       } else {
@@ -28,7 +28,7 @@ export default function WeatherForecastInformation(props){
           <div className="WeatherForecastInformation col">
             {hours()}
             <WeatherIcon code={props.data.weather[0].icon} />
-            <span class="temperature"> {temperature}°C</span>
+            <span className="temperature"> {temperature}°C</span>
           </div>
         );
     
