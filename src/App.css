@@ -32,7 +32,7 @@ footer {
   .tablet footer {
     font-size: 16px;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 50px;
 position: relative;
 right: 80px;
 margin-left: -20px;
@@ -90,13 +90,15 @@ margin: -100px 0 20px 15px;
 }
 
 .mobile .currentIcons{
-  margin: -10px 0 90px 200px;
+  margin: 100px 0 90px 200px;
     color: #a58b98;
     width: 135px;
   }
 
-.mobile .currentIcons canvas {max-width: 60px;
-max-height: 60px;}
+.mobile .currentIcons canvas {max-width: 80px;
+max-height: 80px;
+position: relative;
+left: 50px;}
 
 .currentSpecifics {  color: #f2efd0;
   font-size: 25px;
@@ -112,7 +114,14 @@ margin-top: 3px;
 color: #b870cc;
 }
 
-.mobile .dateStamp h1 {font-size: 18px;
+.mobile .dateStamp h1 {font-size: 22px;
+  font-weight: 100;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+margin-top: 3px;
+color: #b870cc;
+}
+
+.tablet .dateStamp h1 {font-size: 26px;
   font-weight: 100;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 margin-top: 3px;
@@ -125,8 +134,14 @@ color: #b870cc;
 max-height: 58px;
 }
 
+.tablet .hereNow {
+  font-size: 30px;
+  color: #f0ec8c;
+max-height: 58px;
+}
+
 .mobile .hereNow {
-  font-size: 21px;
+  font-size: 23px;
   color: #f0ec8c;
 max-height: 58px;
 }
@@ -153,7 +168,19 @@ width: 99%;}
 .row {position: relative;
   padding-right: 20px;
   right: 25px;
-min-width: 1380px;}
+}
+
+.pc .row {min-width: 1380px;}
+
+.tablet .WeatherForecast {
+  max-width: 900px;
+  flex-wrap: nowrap;
+  position: relative;
+  right: 160px;
+  top: 80px;
+}
+
+
 
 .mobile .row {position: relative;
   padding-right: 20px;
@@ -163,8 +190,8 @@ flex-direction: column;}
 
 .mobile .col {position: relative;
   left: 10px;
-bottom: 380px;
-margin-bottom: 50px;}
+bottom: 510px;
+margin-bottom: 75px;}
 .searchBar {  padding: 30px 0 0 787px;
   width: 100%;
   white-space: nowrap;
@@ -173,6 +200,8 @@ margin-bottom: 50px;}
   font-family: "roboto", monospace;
 }
 
+.tablet .searchBar {position: relative;
+right: 350px;}
 .mobile .searchBar {  padding: 30px 0 0 87px;
   flex-direction: row;
   font-family: "roboto", monospace;
@@ -186,6 +215,11 @@ left: -76px;}
   margin: 5px 0 0 976px;
   font-family: "roboto", monospace;
 }
+
+.tablet .submitlocations h4 {position: relative;
+  margin: 5px 0 0 635px;
+  font-family: "roboto", monospace;
+}
 .mobile  .submitlocations h4 {
   margin: 5px 0 0 286px;
   font-family: "roboto", monospace;
@@ -196,7 +230,13 @@ left: -76px;}
   max-height: 46px;
 }  
 
-.mobile .statusNow {font-size: 18px;
+.mobile .statusNow {font-size: 20px;
+  font-weight: bold;
+  color:  #50fa7b;
+  max-height: 46px;
+}  
+
+.tablet .statusNow{font-size: 26px;
   font-weight: bold;
   color:  #50fa7b;
   max-height: 46px;
@@ -211,7 +251,7 @@ left: -76px;}
 }
 
 .mobile .tempNow {
-  font-size: 30px;
+  font-size: 32px;
   margin-top: -20px;
   margin-left: -15px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -226,14 +266,14 @@ left: -76px;}
 }
 .mobile  .thisLocation {
   position: relative;
-  right: 140px;
-  bottom: 400px;
-   text-align: center;
+  right: 1px;
+  bottom: 480px;
+   text-align: right;
  }
 .tablet .thisLocation {
   position: relative;
-  right: 400px;
-  bottom: 105px;
+  right: 310px;
+  bottom: 95px;
    text-align: center;
  }
 
@@ -249,7 +289,7 @@ display: flex;
 
 .mobile .weather { border: 2px solid #50fa7b;
   min-width: 350px;
-  max-height: 1420px;
+  max-height: 1470px;
   border-radius: 5px;
   margin-top: 5px;
   display: flex;
@@ -257,7 +297,8 @@ display: flex;
 
   .tablet .weather { border: 2px solid #50fa7b;
     min-width: 350px;
-    max-height: 1000px;
+    max-width: 780px;
+    max-height: 550px;
     border-radius: 5px;
     margin-top: 5px;
     display: flex;
@@ -266,7 +307,21 @@ display: flex;
 .WeatherTemperature {padding-left: 10px;}
 
 .mobile .WeatherTemperature {position: relative;
-left: 200px;
+  text-align: right;
+left: -10px;
 bottom: 70px;}
 .windSpeed {color: #b870cc;
 }
+
+
+.tablet .WeatherForecast {max-width: 300px;
+min-width: 300px;
+}
+.tablet .WeatherForecastInformation{max-width: 50px;
+  min-width: 50px;
+position: relative;
+top: 130px;}
+
+  .tablet .WeatherForecast .col {max-width: 100px;
+    min-width: 100px;
+  padding-right: 115px;}
