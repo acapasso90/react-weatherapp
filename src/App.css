@@ -45,7 +45,7 @@ img {min-height: 80px;
 .mobile img {min-height: 60px;
   min-width: 60px;}
 
-.mobile input {max-width: 240px;
+.mobile input {max-width: 230px;
 position: relative;
 bottom: 30px;
 right: 95px;}
@@ -221,7 +221,7 @@ left: -76px;}
   font-family: "roboto", monospace;
 }
 .mobile  .submitlocations h4 {
-  margin: 5px 0 0 306px;
+  margin: 5px 0 0 315px;
   font-family: "roboto", monospace;
 }
 .statusNow {font-size: 32px;
