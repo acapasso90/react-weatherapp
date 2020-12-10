@@ -90,7 +90,7 @@ margin: -100px 0 20px 15px;
 }
 
 .mobile .currentIcons{
-  margin: 100px 0 90px 200px;
+  margin: 100px 0 90px 220px;
     color: #a58b98;
     width: 135px;
   }
@@ -212,7 +212,7 @@ right: 350px;}
 left: -76px;}
 
 .submitlocations h4 {
-  margin: 5px 0 0 976px;
+  margin: 5px 0 0 986px;
   font-family: "roboto", monospace;
 }
 
@@ -221,7 +221,7 @@ left: -76px;}
   font-family: "roboto", monospace;
 }
 .mobile  .submitlocations h4 {
-  margin: 5px 0 0 286px;
+  margin: 5px 0 0 306px;
   font-family: "roboto", monospace;
 }
 .statusNow {font-size: 32px;
