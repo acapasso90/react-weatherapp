@@ -64,6 +64,9 @@ ul {
   list-style: none;
 }
 
+.App {width: 100vw;
+height: 100vh;}
+
 .btn {min-width: 115.47px;
 padding: 8px 0;
 margin-top: 2px;}
@@ -79,10 +82,14 @@ font-family: 'Yanone Kaffeesatz', sans-serif;}
 font-size: 20px;
 font-family: 'Yanone Kaffeesatz', sans-serif;}
 
-.container {min-height: 600px;
+.container {min-height: 700px;
+  padding: 0;
+  margin-left: 7%;
+  min-width: 73%;
+  justify-content: center;
 }
 
-
+.container2 {margin-left: 2%;}
 .currentIcons {
 margin: -100px 0 20px 15px;
   color: #a58b98;
@@ -192,13 +199,15 @@ flex-direction: column;}
   left: 10px;
 bottom: 510px;
 margin-bottom: 75px;}
-.searchBar {  padding: 30px 0 0 787px;
+.searchBar {  padding: 1% 0 0 57.5%;
   width: 100%;
   white-space: nowrap;
   display: flex;
   font-size: 22px;
   font-family: "roboto", monospace;
 }
+
+#searchBar {margin-right: 2%;}
 
 .tablet .searchBar {position: relative;
 right: 350px;}
@@ -259,27 +268,22 @@ left: -76px;}
 }
 
 .thisLocation {
- position: relative;
- right: 550px;
- bottom: 100px;
+ position: absolute;
+ left: 30%;
+ top: 2%;
   text-align: center;
 }
 .mobile  .thisLocation {
   position: relative;
-  right: 1px;
+  left: -40%;
   bottom: 480px;
    text-align: right;
  }
-.tablet .thisLocation {
-  position: relative;
-  right: 310px;
-  bottom: 95px;
-   text-align: center;
- }
+
 
 
 .weather { border: 2px solid #50fa7b;
-min-width: 1200px;
+min-width: 100%;
 max-height: 600px;
 border-radius: 5px;
 margin-top: 5px;

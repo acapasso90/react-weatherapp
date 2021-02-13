@@ -9,6 +9,7 @@ export default function Weather(props){
   const [city, setCity] = useState(props.defaultCity);
   const [unit, setUnit] = useState("farenheit");
 
+// sets Weather Data from API to weatherData to be sent to WeatherInfo.js and WeatherForecast.js. Rounds temperatures/humidity/windspeed. 
 function handleResponse(response){
   setWeatherData({
     ready: true,
@@ -23,30 +24,36 @@ function handleResponse(response){
  })
 }
 
+// uses City from updateCity function to make API request. Calls handleResponse function
 function search(){  const apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
 let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 axios.get(apiURL).then(handleResponse);
 }
 
+// prevents page from refreshing on form submit and runs search with updated city from updateCity function
 function handleSubmit(event){event.preventDefault();
 search();}
 
+// setsCity to what is typed in search bar
 function updateCity(event){setCity(event.target.value)};
 
-function searchCity(position){let apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
+// Uses geolocator latitude and longitude to make API request with user's location in Imperial measurement. Sends info to handleResponse function
+function searchCity(position){const apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
 let units = "imperial";
 let latitude = position.coords.latitude;
 let longitude = position.coords.longitude;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(handleResponse);}
 
+// gets user's current location and runs searchCity.
 function useCity(event) {event.preventDefault();
 navigator.geolocation.getCurrentPosition(searchCity);}
 
+// if weatherData is ready displays weather app and search bar
 if (weatherData.ready) {
   return (
     <div className="weather">
-      <div className="container">
+      <div className="container2">
         <div className="inputs">
           <div className="searchBar">
             <form onSubmit={handleSubmit}>
@@ -56,7 +63,7 @@ if (weatherData.ready) {
                 placeholder="Enter your location"
                 autoFocus="on"
                 autoComplete="off"
-                className="shadow-sm"
+                className="shadow-sm" id="searchBar"
               />
               <span className="searchButton">
                 <input
@@ -83,7 +90,9 @@ if (weatherData.ready) {
       </div>
     </div>
   );
-} else {
+} 
+// Runs search function, displays React Loader Spinner and Loading message. 
+else {
   search();
   return (
     <div className="Loader">

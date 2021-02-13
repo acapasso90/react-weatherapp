@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
+//Returns WeatherInfo with Weather Icon and Formatted date
 export default function WeatherInfo(props)
 {return(<div className="weatherInfo">
 <div className="left">
@@ -14,10 +15,8 @@ export default function WeatherInfo(props)
          wind={props.data.windSpeed}
          humidity={props.data.humidity}
          unit={props.unit}
-         setUnit={props.setUnit}
-/>
-     </div>
- 
+         setUnit={props.setUnit}/>
+         </div>
        <div className="right">
          <div className="thisLocation">
           <div className="hereNow"> {props.data.city} </div>

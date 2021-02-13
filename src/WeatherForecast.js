@@ -7,10 +7,10 @@ export default function WeatherForecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
   
-  function handleForecastResponse(response) {
-    setForecast(response.data);
-    setLoaded(true);
-  }
+  // Sets Forecast to response from API and sets loaded to true.
+  function handleForecastResponse(response) {setForecast(response.data); setLoaded(true);}
+
+  // if Loaded and city from props matches forecast cist name display WeatherForecastInformation
   if (loaded && props.city === forecast.city.name) {
     return (
       <div className="WeatherForecast row">
@@ -22,7 +22,9 @@ export default function WeatherForecast(props) {
         <WeatherForecastInformation data={forecast.list[5]} unit={props.unit} />
       </div>
     );
-  } else {
+  } 
+  // If  not loaded or city does not equal forecast city name, make API call and call handleForecastResponse function.
+  else {
     const apiKey = "18f340f6d9fdf80c205f1ddbd39b428f";
     let apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=imperial`;
     axios.get(apiURL).then(handleForecastResponse);
