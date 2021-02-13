@@ -46,9 +46,9 @@ img {min-height: 80px;
 .mobile img {min-height: 60px;
   min-width: 60px;}
 
-.mobile input {max-width: 230px;
+.mobile input {max-width: 270px;
 position: relative;
-bottom: 30px;
+bottom: 28px;
 right: 95px;}
 
 input,
@@ -89,6 +89,8 @@ font-family: 'Yanone Kaffeesatz', sans-serif;}
   margin-right: 0px!important;
   min-width: 73%;
 }
+/*Mobile sized*/
+@media only screen and (max-width: 500px)  {.container {margin-left: 2.2%;}}
 
 .container2 {margin-left: 2%;
 width: 98%;}
@@ -99,7 +101,7 @@ margin: -45px 0 20px 15px;
 }
 
 .mobile .currentIcons{
-  margin: 100px 0 90px 220px;
+  margin: 70% 0 90px 160%;
     color: #a58b98;
     width: 135px;
   }
@@ -147,6 +149,7 @@ max-height: 58px;
   font-size: 30px;
   color: #f0ec8c;
 max-height: 58px;
+margin-top: 5%;
 }
 
 .mobile .hereNow {
@@ -163,6 +166,9 @@ max-height: 58px;
 .inputs {position: absolute;
 left: 58%;
 top: 3%;}
+
+.mobile .inputs {top: 5%;
+left: 30%;}
 
 .left {float: left;}
 
@@ -186,18 +192,20 @@ width: 99%;}
 white-space: nowrap;}
 
 .tablet .WeatherForecast {
+  min-width: 400px;
   max-width: 900px;
   flex-wrap: nowrap;
   position: relative;
-  right: 160px;
-  top: 80px;
+top: 27%;
+right: 17.8%;
 }
 
 
 
 .mobile .row {position: relative;
-  padding-right: 20px;
-  right: 25px;
+  padding-right: 5%;
+  top: 40.5%;
+  right: 41%;
 display: flex;
 flex-direction: column;}
 
@@ -215,12 +223,8 @@ margin-bottom: 75px;}
 
 #searchBar {margin-right: 2%;}
 
-.tablet .searchBar {position: relative;
-right: 350px;}
-.mobile .searchBar {  padding: 30px 0 0 87px;
-  flex-direction: row;
-  font-family: "roboto", monospace;
-}
+
+
 
 .mobile .btn {position: relative;
   top: -28px;
@@ -228,16 +232,10 @@ left: -76px;}
 
 #useHereButton {  font-family: "roboto", monospace;
   margin-left: 65%;
+  margin-top: 2%;
 }
 
-.tablet .submitlocations h4 {position: relative;
-  margin: 5px 0 0 635px;
-  font-family: "roboto", monospace;
-}
-.mobile  .submitlocations h4 {
-  margin: 5px 0 0 316px;
-  font-family: "roboto", monospace;
-}
+
 .statusNow {font-size: 32px;
   font-weight: bold;
   color:  #50fa7b;
@@ -280,8 +278,8 @@ left: -76px;}
 }
 .mobile  .thisLocation {
   position: relative;
-  left: -40%;
-  bottom: 480px;
+  left: -4%;
+  top: 350px;
    text-align: right;
  }
 
@@ -299,35 +297,26 @@ display: flex;
 .pc .weather {min-width: 1150px;}
 
 .mobile .weather { border: 2px solid #50fa7b;
-  min-width: 350px;
-  max-height: 1470px;
-  border-radius: 5px;
-  margin-top: 5px;
-  display: flex;
-  }
+  min-width: 345px;
+  max-width: 376px;
+  max-height: 1470px; }
 
-  .tablet .weather { border: 2px solid #50fa7b;
-    min-width: 350px;
-    max-width: 780px;
-    max-height: 550px;
-    border-radius: 5px;
-    margin-top: 5px;
-    display: flex;
-    }
+.tablet .weather { border: 2px solid #50fa7b;
+min-width: 90%;
+    max-width: 80%;
+    min-height: 510px; }
 
 .WeatherTemperature {padding-left: 10px;}
 
 .mobile .WeatherTemperature {position: relative;
   text-align: right;
-left: -10px;
-bottom: 70px;}
+left: 163%;
+top: -60px;}
 .windSpeed {color: #b870cc;
 }
 
 
-.tablet .WeatherForecast {max-width: 300px;
-min-width: 300px;
-}
+
 .tablet .WeatherForecastInformation{max-width: 50px;
   min-width: 50px;
 position: relative;
@@ -335,4 +324,4 @@ top: 130px;}
 
   .tablet .WeatherForecast .col {max-width: 100px;
     min-width: 100px;
-  padding-right: 115px;}
+  padding-right: 21.5%;}
