@@ -1,11 +1,15 @@
 canvas {display: block;
 }
 
-.WeatherForecast canvas {max-width: 75px;
-max-height: 75px;
-margin: 10px 0;
-margin-left: auto;
-margin-right: auto;}
+.pc .WeatherForecast canvas {max-width: 45%;
+max-height: 45%;
+}
+
+ .WeatherForecast canvas {max-width: 75px;
+  max-height: 75px;
+  margin: 10px 0;
+  margin-left: auto;
+  margin-right: auto;}
 
 .WeatherForecast {padding-top: 30px;
     text-align: center;
@@ -18,11 +22,14 @@ font-size: 36px;
 text-align: center;
 margin-left: 7px;}
 
-.WeatherForecast .col {max-width: 205px;
-padding-right: 125px;
+.WeatherForecast .col {max-width: 17.5%;
+  margin-left: -2%;
 margin-top: -40px;}
 
+.mobile .WeatherForecast .col {margin-top: 2px;
+}
 
+.mobile .WeatherForecastInformation {margin-bottom: 27.5%}
 .WeatherForecastInformation .hours {font-size: 34px;
   white-space: nowrap;
     font-family:  'Yanone Kaffeesatz', sans-serif;

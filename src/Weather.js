@@ -76,12 +76,7 @@ if (weatherData.ready) {
           </div>
           <div className="submitlocations">
             <h4>
-              <input
-                type="submit"
-                value="use current"
-                className="btn btn-dark shadow-sm"
-                onClick={useCity}
-              />
+              <input type="submit" value="use current" className="btn btn-dark shadow-sm" id="useHereButton" onClick={useCity}/>
             </h4>
           </div>
         </div>

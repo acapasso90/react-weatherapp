@@ -10,6 +10,7 @@ body {
   font-family: "roboto", monospace;
   font-size: 22px;
   text-transform: capitalize;
+  overflow-x: hidden;
 }
 
 footer {
@@ -83,15 +84,16 @@ font-size: 20px;
 font-family: 'Yanone Kaffeesatz', sans-serif;}
 
 .container {min-height: 700px;
-  padding: 0;
+  padding: 0px;
   margin-left: 7%;
+  margin-right: 0px!important;
   min-width: 73%;
-  justify-content: center;
 }
 
-.container2 {margin-left: 2%;}
+.container2 {margin-left: 2%;
+width: 98%;}
 .currentIcons {
-margin: -100px 0 20px 15px;
+margin: -45px 0 20px 15px;
   color: #a58b98;
   width: 135px;
 }
@@ -158,6 +160,9 @@ max-height: 58px;
 .iconNow {min-height: 140px;
   min-width: 140px;}
 
+.inputs {position: absolute;
+left: 58%;
+top: 3%;}
 
 .left {float: left;}
 
@@ -177,7 +182,8 @@ width: 99%;}
   right: 25px;
 }
 
-.pc .row {min-width: 1380px;}
+.pc .row {min-width: 1280px;
+white-space: nowrap;}
 
 .tablet .WeatherForecast {
   max-width: 900px;
@@ -199,8 +205,8 @@ flex-direction: column;}
   left: 10px;
 bottom: 510px;
 margin-bottom: 75px;}
-.searchBar {  padding: 1% 0 0 57.5%;
-  width: 100%;
+
+.searchBar {  padding-top: 1%;
   white-space: nowrap;
   display: flex;
   font-size: 22px;
@@ -220,9 +226,8 @@ right: 350px;}
   top: -28px;
 left: -76px;}
 
-.submitlocations h4 {
-  margin: 5px 0 0 985px;
-  font-family: "roboto", monospace;
+#useHereButton {  font-family: "roboto", monospace;
+  margin-left: 65%;
 }
 
 .tablet .submitlocations h4 {position: relative;
@@ -286,10 +291,12 @@ left: -76px;}
 min-width: 100%;
 max-height: 600px;
 border-radius: 5px;
+padding-top: 5%;
 margin-top: 5px;
 display: flex;
-
 }
+
+.pc .weather {min-width: 1150px;}
 
 .mobile .weather { border: 2px solid #50fa7b;
   min-width: 350px;
