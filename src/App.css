@@ -221,17 +221,18 @@ margin-bottom: 75px;}
   font-family: "roboto", monospace;
 }
 
-#searchBar {margin-right: 5%;}
+#searchBar {margin-right: 13%;}
 
 
 
 
 .mobile .btn {position: relative;
   top: -28px;
-left: -30%;}
+left: -40%;}
 
 #useHereButton {  font-family: "roboto", monospace;
-  margin-left: 67%;
+ position: relative;
+ left: 36%;
   margin-top: 2%;
 }
 
