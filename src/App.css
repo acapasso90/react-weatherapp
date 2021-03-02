@@ -188,7 +188,7 @@ width: 99%;}
   right: 25px;
 }
 
-.pc .row {min-width: 1280px;
+.pc .row {min-width: 110%;
 white-space: nowrap;}
 
 .tablet .WeatherForecast {
@@ -228,7 +228,7 @@ margin-bottom: 75px;}
 
 .mobile .btn {position: relative;
   top: -28px;
-left: -76px;}
+left: -30%;}
 
 #useHereButton {  font-family: "roboto", monospace;
   margin-left: 65%;
@@ -286,7 +286,7 @@ left: -76px;}
 
 
 .weather { border: 2px solid #50fa7b;
-min-width: 100%;
+width: 100%;
 max-height: 600px;
 border-radius: 5px;
 padding-top: 5%;
@@ -294,7 +294,6 @@ margin-top: 5px;
 display: flex;
 }
 
-.pc .weather {min-width: 1150px;}
 
 .mobile .weather { border: 2px solid #50fa7b;
   min-width: 345px;
